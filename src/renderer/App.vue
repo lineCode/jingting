@@ -12,4 +12,29 @@
 
 <style>
   /* CSS */
+* {
+  transition: all 0.3s ease;
+}
+
+::selection {
+  background-color: #17a2b8;
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 0.3rem;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Microsoft YaHei";
+  user-select: none;
+  -webkit-app-region: drag;
+  overflow: hidden;
+}
+
+input,
+a,
+button {
+  -webkit-app-region: no-drag;
+}
 </style>
