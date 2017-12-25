@@ -14,6 +14,9 @@
   /* CSS */
 * {
   transition: all 0.3s ease;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 ::selection {
@@ -23,6 +26,13 @@
 
 ::-webkit-scrollbar {
   width: 0.3rem;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+  overflow: hidden;
 }
 
 body {
@@ -36,5 +46,9 @@ input,
 a,
 button {
   -webkit-app-region: no-drag;
+}
+
+a {
+  text-decoration: none;
 }
 </style>

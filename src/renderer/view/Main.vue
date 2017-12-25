@@ -1,12 +1,21 @@
 <template>
   <div class="jt-container">
     <div class="jt-head">
-      <div class="jt-head-time">{{playTime}}</div>
-      <div class="jt-head-name">{{playMusic}}</div>
-      <div class="jt-head-time">{{totalTime}}</div>
+      <h3 class="text-center">{{playMusic}}</h3>
     </div>
-    <div class="jt-body"></div>
-    <div class="jt-foot"></div>
+    <div class="jt-body">
+      <div class="jt-wave"></div>
+      <div class="jt-progress-bar">
+        <div class="jt-progress"></div>
+      </div>
+    </div>
+    <div class="jt-foot jt-flex">
+      <div class="jt-foot-list">
+        <a href="javascript:;">
+          <i class="iconfont icon-list"></i>
+        </a>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -15,7 +24,7 @@ export default {
   name: 'Main',
   data () {
     return {
-      playMusic: '',
+      playMusic: 'MUSIC NAME',
       playTime: '0:00',
       totalTime: '0:00'
     }
@@ -26,14 +35,35 @@ export default {
 <style scoped>
 .jt-container {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  height: 100%;
 }
 
-.jt-head {
+.jt-flex {
   display: flex;
 }
 
-.jt-head-time {
-  
+.jt-content-center {
+  justify-content: center;
+}
+
+.jt-content-space-between {
+  justify-content: space-between;
+}
+
+.jt-content-space-around {
+  justify-content: space-around;
+}
+
+.jt-head {
+  padding: 1rem;
+}
+
+.jt-foot {
+  margin-top: auto!important;
+}
+
+.text-center {
+  text-align: center;
 }
 </style>
